@@ -4,7 +4,8 @@ function App() {
   // BEM naming convention
   return (
     <div className="app">
-      <h1>YOUTUBE CLONE </h1>
+      <h1>YOUTUBE CLONE PROJECT</h1>
+      
     </div>
   );
 }
