@@ -1,3 +1,7 @@
+import Header from "./Components/Header";
+import Recommended from "./Components/Recommended";
+import Sidebar from "./Components/Sidebar";
+
 import "./App.css";
 
 function App() {
@@ -5,9 +9,9 @@ function App() {
   return (
     <div className="app">
       <h1>YOUTUBE CLONE PROJECT</h1>
-{/* <Header/> or <NavBar />*/}
-{/* <Aside /> */}
-{/* <Recommended /> <Display /> */}
+      <Header />
+      <Aside />
+      <Recommended />
     </div>
   );
 }
