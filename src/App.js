@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <h1>YOUTUBE CLONE PROJECT</h1>
       <Header />
-      <Aside />
+      <Sidebar />
       <Recommended />
     </div>
   );
