@@ -1,6 +1,6 @@
 import Header from "./Components/Header";
 import Recommended from "./Components/Recommended";
-import Sidebar from "./Components/Sidebar";
+import Sidebar from "./Components/Sidebar"
 
 import "./App.css";
 
