@@ -1,0 +1,9 @@
+.sidebar {
+  border: 1px black solid;
+  flex: 0.2;
+}
+
+.sidebar__link a {
+  color: black;
+  text-decoration: none;
+}

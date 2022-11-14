@@ -1,7 +1,9 @@
-import Header from "./Components/Header";
-import Recommended from "./Components/Recommended";
-import Sidebar from "./Components/Sidebar";
 import { Routes, Route } from "react-router-dom";
+import Header from "./Components/Header";
+import About from "./Pages/About";
+import Home from "./Pages/Home";
+import VideoCard from "./Components/VideoCard";
+import VideoClicked from "./Components/VideoClicked";
 import "./App.css";
 
 function App() {
@@ -19,12 +21,13 @@ function App() {
   // BEM naming convention
   return (
     <div className="app">
+      <Header />
+      {/* add the fetch to the header component for when th user types into the search bar */}
       <Routes>
-        <Route path="/" />
-        <Header />
-        {/* add the fetch to the header component for when th user types into the search bar */}
-        <Sidebar />
-        <Recommended />{" "}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/videos" element={<VideoCard />} />
+        <Route path="videos/:id" element={<VideoClicked />} />
       </Routes>
     </div>
   );
