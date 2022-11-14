@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" /> 
+        <Route path="/" />
         <Header />
         {/* add the fetch to the header component for when th user types into the search bar */}
         <Sidebar />
