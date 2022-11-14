@@ -1,7 +1,7 @@
 import Header from "./Components/Header";
 import Recommended from "./Components/Recommended";
 import Sidebar from "./Components/Sidebar";
-
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -19,12 +19,13 @@ function App() {
   // BEM naming convention
   return (
     <div className="app">
-      {test()}
-      <h1>YOUTUBE CLONE PROJECT</h1>
-      <Header />
-      {/* add the fetch to the header component for when th user types into the search bar */}
-      <Sidebar />
-      <Recommended />
+      <Routes>
+        <Route path="/" /> 
+        <Header />
+        {/* add the fetch to the header component for when th user types into the search bar */}
+        <Sidebar />
+        <Recommended />{" "}
+      </Routes>
     </div>
   );
 }
