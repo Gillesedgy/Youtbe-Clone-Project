@@ -5,27 +5,42 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import "./Header.css";
 import InfoSharpIcon from "@mui/icons-material/InfoSharp";
-import {searchFetch} from '../fetch.js'
+import { searchFetch } from "../fetch.js";
 
-
-export default function Header({setInput}) {
+export default function Header({ input, setInput }) {
   const [search, setSearch] = useState("");
 
-
-  function userSearch(e) {
-    setSearch(e.target.value);
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (e.target.value !== "") {
+      setInput(search);
+    }
   }
 
-  useEffect (()=>{
-    if(search){
-      
-      searchFetch(search).then((res)=>{
-setInput(res)
-      }).catch((err)=> console.log("NO INPUT"))
-    }
-  })
+  function userSearch(e) {
+    if (e.target.value !== "") setSearch(e.target.value);
+  }
+  console.log(search);
 
-  
+  // function getVideos(input) {
+  //   if (input !== "") {
+  //     searchFetch(input)
+  //       .then((res) => {
+  //         res.map((vid) => console.log(vid.items.snippet.title));
+  //       })
+
+  //       .catch((err) => console.log("NO INPUT"));
+  //   }
+  // }
+
+  useEffect(() => {
+    if (input.length !== 0) {
+      searchFetch(input).then(
+        (res) => console.log(res)
+        // res.map((vid) => console.log(vid.items.snippet.title))
+      );
+    }
+  }, [input]);
 
   return (
     <div className="header">
@@ -41,7 +56,7 @@ setInput(res)
           />
         </Link>
       </div>
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <div className="header__searchBar">
           <input type="text" value={search} onChange={(e) => userSearch(e)} />
           <button type="submit">
