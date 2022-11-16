@@ -1,6 +1,7 @@
 .sidebar {
-  border: 1px black solid;
+  border: 3px green solid;
   flex: 0.2;
+  height: 100vh
 }
 
 .sidebar__link a {

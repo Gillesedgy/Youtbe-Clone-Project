@@ -1,3 +1,9 @@
-.main_display {
+.home {
   display: flex;
+
+  /* grid-template-columns: 1fr 3fr; */
+  flex: 0.8;
+  height: 100vh;
+  width: 100vw;
+  /* width: */
 }

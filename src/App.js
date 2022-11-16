@@ -5,22 +5,27 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import VideoCard from "./Components/VideoCard";
 import VideoClicked from "./Components/VideoClicked";
-
+import Sidebar from "./Components/Sidebar"
 import "./App.css";
 
 function App() {
-  const [input, setInput] = useState("");
+  const [result, setResult]=useState([])
+  // const [input, setInput] = useState("");
   // BEM naming convention
   return (
     <div className="app">
-      <Header input={input} setInput={setInput} />
+      <Header  />
       {/* add the fetch to the header component for when th user types into the search bar */}
+      <div className="app__main"> 
+      <Sidebar className="app__sidebar" />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/videos" element={<VideoCard input={input} />} />
+        <Route path="/videos" element={<VideoCard  />} />
         <Route path="videos/:id" element={<VideoClicked />} />
       </Routes>
+      </div>
+      
     </div>
   );
 }
