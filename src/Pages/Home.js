@@ -1,13 +1,12 @@
 import React from "react";
-
+import VideoCard from '../Components/VideoCard'
 import Recommended from "../Components/Recommended";
 import Sidebar from "../Components/Sidebar";
 import './Home.css'
-export default function Home() {
+export default function Home({result}) {
   return (
     <div className="home">
-
-      <Recommended />
+{result ? <VideoCard /> :  <Recommended /> }
     </div>
   );
 }
