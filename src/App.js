@@ -14,19 +14,18 @@ function App() {
   // BEM naming convention
   return (
     <div className="app">
-      <Header  />
+      <Header setResult={setResult} result={result}  />
       {/* add the fetch to the header component for when th user types into the search bar */}
       <div className="app__main"> 
       <Sidebar className="app__sidebar" />
       <Routes>
         <Route path="/" element={<Home result={result} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/videos" element={<VideoCard  />} />
-        <Route path="videos/:id" element={<VideoClicked />} />
+        <Route path="/videos" element={<VideoCard result={result}  />} />
+        <Route path="videos/:id" element={<VideoClicked result={result} />} />
       </Routes>
       </div>
-      
-    </div>
+      </div>
   );
 }
 

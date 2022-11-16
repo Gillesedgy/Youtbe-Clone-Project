@@ -7,15 +7,14 @@ import "./Header.css";
 import InfoSharpIcon from "@mui/icons-material/InfoSharp";
 import { searchFetch } from "../fetch.js";
 
-export default function Header({ setResult }) {
+export default function Header({ setResult, result }) {
 const [search, setSearch ] = useState("");
 
 
   function handleSubmit(e) {
     e.preventDefault();
     if (e.target.value !== "") {
-   
-      fetchData(search)
+         fetchData(search)
       setSearch("")
     }
   }
@@ -26,15 +25,18 @@ const [search, setSearch ] = useState("");
        )
        .then(res => res.json())
        .then((data)=> 
-      //  console.log(data, "^^^", data.items[0].snippet.title) 
-       data.items.map((resu)=>{
-      
-        console.log(resu, resu.snippet.title)
+         setResult(data)
+
+       
+      //  data.items.map((resu)=>{
         
-       })
-       )
-       .catch((err)=>{console.log(err)})
-    }
+        //   console.log(resu, resu.snippet.title)
+        
+        //  })
+        )
+        .catch((err)=>{console.log(err)})
+      }
+      console.log(result)
    
 
 
