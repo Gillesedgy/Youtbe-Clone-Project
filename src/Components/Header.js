@@ -36,30 +36,23 @@ export default function Header({ input, setInput }) {
   }
  let api_key =`AIzaSyCI95EW1HK6F0M4EW7Aza9Tl7KM2OQZHRc`
 
-  // let video_http = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&q=${input}&regionCode=US&key=${api_key}`
-  // // `https://www.googleapis.com/youtube/v3/videos?key=${api_key}`;
-  // let channel_http = "https://www.googleapis.com/youtube/v3/channels?";
-  
-  //  fetch(video_http 
-  // //   + new URLSearchParams({
-  // //   key: api_key,
-  // // part: 'snippet',
-  // //   chart: 'mostPopular',
-  // //    maxResults: 50,
-  // //  regionCode: 'IN'
-  // //  })
-  // )
-  // .then(res => res.json())
-  // .then(data => {
-  // console.log(data.items)
+  // trying to store search in window.storage
+  // useEffect is used to handle async functions 
+  useEffect(()=>{
+    // To stop useEffec from infinite loop, set a conditional like MINA did 
+if (search.length === 0) return;
+    // fetch
+    searchFetch(input).then((data.items[0])=>{
+      // I want to set local storage using my search input and saving the data
+      //* this might  be search instead of input, double check with mina  */
+      window.localStorage.setItem(input, JSON.stringify(data))
+      // I want to set mt state with the data
+      setInput(data)
+      // I want to reset my input to prevent an infinite loop 
+      setInput("")
 
-
-  // //   // data.items.forEach(item => {
-  // //   //     // getChannelIcon(item);
-  // //   // })
-  // })
-  // .catch(err => console.log(err));
-
+    })
+  },[input])
   
   // useEffect(() => {
     if (input.length !== 0) {
