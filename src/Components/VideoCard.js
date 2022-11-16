@@ -1,11 +1,13 @@
 import React from "react";
 
-export default function VideoCard({result}) {
-  return (<div>
-    <p>This will show searched videos hehe</p>
-  
- { console.log("results-->",result)}
-
-  
-  </div>);
+export default function VideoCard({ result }) {
+  return (
+    <div>
+      {result.items.map((vid) => (
+        <div key={vid.id} className="card">
+          <img src={vid.snippet.thumbnails.medium} alt={vid.snippet.title} />
+        </div>
+      ))}
+    </div>
+  );
 }

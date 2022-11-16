@@ -1,24 +1,12 @@
-import VideoCard from "./VideoCard"
-import './Recommended.css'
-export default function Recommended() {
-  // This will display the thumbnails and cideo descriptiion for user to click on 
- <VideoCard />
+import VideoCard from "./VideoCard";
+import "./Recommended.css";
+export default function Recommended({ result }) {
+  // This will display the thumbnails and cideo descriptiion for user to click on
 
- 
-
-
-
-
-
-
-
-  return ( 
+  return (
     <div className="recommended">
-     
-     <h3>Rec Videos will appear here</h3>
-
-       
+      <h3>Rec Videos will appear here</h3>
+      {console.log(result)}
     </div>
-
-  )
-} 
+  );
+}
