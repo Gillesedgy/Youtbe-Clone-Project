@@ -19,7 +19,7 @@ function App() {
       <div className="app__main"> 
       <Sidebar className="app__sidebar" />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home result={result} />} />
         <Route path="/about" element={<About />} />
         <Route path="/videos" element={<VideoCard  />} />
         <Route path="videos/:id" element={<VideoClicked />} />
