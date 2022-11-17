@@ -2,8 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
-import { searchFetch } from "../fetch.js";
-export default function Searchbar({ result, setResult, input, setInput }) {
+export default function Searchbar({ result, setResult }) {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
