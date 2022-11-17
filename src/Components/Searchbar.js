@@ -10,18 +10,32 @@ export default function Searchbar({ result, setResult, input, setInput }) {
   function handleSubmit(e) {
     e.preventDefault();
     if (e.target.value !== "") {
-      fetchData(search);
-      navigate("/videos");
-      setSearch("");
+      if (savedInput) {
+        console.log("grabbing from Storage");
+        setResult(savedInput.items);
+        navigate("/videos");
+        setSearch("");
+      } else {
+        console.log("had to fetch homie");
+        fetchData(search);
+        navigate("/videos");
+        setSearch("");
+      }
     }
   }
 
-  let video_http = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&regionCode=US&maxResults=25&key=${process.env.REACT_APP_API_KEY}`;
+  let savedInput = JSON.parse(window.localStorage.getItem(search));
+
+  let video_http = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&regionCode=US&maxResults=25&key=${process.env.REACT_APP_API_KEY2}`;
   //
+
   function fetchData(search) {
     fetch(video_http)
       .then((res) => res.json())
-      .then((data) => setResult(data.items))
+      .then((data) => {
+        window.localStorage.setItem(search, JSON.stringify(data));
+        setResult(data.items);
+      })
       .catch((err) => {
         console.log(err);
       });

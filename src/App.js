@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   const [result, setResult] = useState([]);
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState("");
   // BEM naming convention
   return (
     <div className="app">
@@ -25,7 +25,10 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/videos" element={<VideoCard result={result} />} />
-          <Route path="/videos/:id" element={<VideoClicked  result={result} />} />
+          <Route
+            path="/videos/:id"
+            element={<VideoClicked result={result} />}
+          />
         </Routes>
       </div>
     </div>
