@@ -1,8 +1,8 @@
 // const BASE_URL = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${userinput}&maxResults=15&key=${process.env.REACT_APP_API_KEY}`;
 
 export function searchFetch(input) {
-  console.log(process.env.REACT_APP_API_KEY2);
-  console.log("yo");
+  // console.log(process.env.REACT_APP_API_KEY2);
+  // console.log("yo");
   let video_http = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${input}&regionCode=US&key=${process.env.REACT_APP_API_KEY2}`;
 
   // `https://www.googleapis.com/youtube/v3/videos?key=${api_key}`;

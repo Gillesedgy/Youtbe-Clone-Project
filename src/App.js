@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   const [result, setResult] = useState([]);
-  // const [input, setInput] = useState("");
+  const [input, setInput] = useState("");
   // BEM naming convention
   return (
     <div className="app">
