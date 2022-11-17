@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 import { useState } from "react";
 import Header from "./Components/Header";
 import About from "./Pages/About";
@@ -9,6 +9,7 @@ import Sidebar from "./Components/Sidebar";
 import "./App.css";
 
 function App() {
+  let { id } = useParams();
   const [result, setResult] = useState([]);
   // const [input, setInput] = useState("");
   // BEM naming convention
