@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import YouTube from "react-youtube";
 
-export default function VideoCard({ result, videoId }) {
-  {
-    /* <Youtube videoId={id} opts={opts} onReady={onPlayerReady}/> */
-  }
-
+export default function VideoCard({ result, videoId, setClicked }) {
   const { id } = useParams();
-  const opts = {
-    height: "400",
-    width: "640",
-  };
+
   //import new URL for fetching
   let BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${id}&maxResult=15&key=AIzaSyAuLsFRZknOO7c4ZGDiGovyi3g3b8WCyiI`;
 
@@ -28,7 +20,10 @@ export default function VideoCard({ result, videoId }) {
       {result.map((vid, index) => {
         return (
           <div key={index}>
-            <Link to={`/videos/${vid.id.videoId}`} state={{ vid }}>
+            <Link
+              to={`/videos/${vid.id.videoId}`}
+              state={{ title: vid.snippet.title }}
+            >
               <img
                 src={vid.snippet.thumbnails.medium.url}
                 alt={vid.snippet.title}

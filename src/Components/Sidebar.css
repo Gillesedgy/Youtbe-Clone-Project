@@ -1,7 +1,9 @@
 .sidebar {
   border: 3px green solid;
   flex: 0.2;
-  height: 100vh
+  height: 100vh;
+  position: sticky;
+  background-color: aquamarine;
 }
 
 .sidebar__link a {
