@@ -28,7 +28,7 @@ export default function VideoCard({ result, videoId }) {
       {result.map((vid, index) => {
         return (
           <div key={index}>
-            <Link to={`/videos/${videoId}`} state={{ vid }}>
+            <Link to={`/videos/${vid.id.videoId}`} state={{ vid }}>
               <img
                 src={vid.snippet.thumbnails.medium.url}
                 alt={vid.snippet.title}
