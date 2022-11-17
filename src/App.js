@@ -1,4 +1,4 @@
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Header from "./Components/Header";
 import About from "./Pages/About";
@@ -9,8 +9,8 @@ import Sidebar from "./Components/Sidebar";
 import "./App.css";
 
 function App() {
-  let { id } = useParams();
   const [result, setResult] = useState([]);
+  const [clicked, setClicked] = useState([]);
   // const [input, setInput] = useState("");
   // BEM naming convention
   return (
@@ -18,17 +18,20 @@ function App() {
       <Header setResult={setResult} result={result} />
       {/* add the fetch to the header component for when th user types into the search bar */}
       <div className="app__main">
-        <Sidebar className="app__sidebar" />
+        <Sidebar />
         <Routes>
           <Route
             path="/"
             element={<Home result={result} setResult={setResult} />}
           />
           <Route path="/about" element={<About />} />
-          <Route path="/videos" element={<VideoCard result={result} />} />
+          <Route
+            path="/videos"
+            element={<VideoCard result={result} setClicked={setClicked} />}
+          />
           <Route
             path="/videos/:id"
-            element={<VideoClicked result={result} />}
+            element={<VideoClicked clicked={clicked} />}
           />
         </Routes>
       </div>

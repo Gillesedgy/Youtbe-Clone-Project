@@ -1,6 +1,6 @@
-.app__main{
-    display: flex;
-    justify-content: space-between;
-    height:100vh;
-}
+.app__main {
+  display: flex;
+  justify-items: center;
 
+  height: 100vh;
+}
