@@ -25,7 +25,7 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/videos" element={<VideoCard result={result} />} />
-          <Route path="videos/:id" element={<VideoClicked result={result} />} />
+          <Route path="/videos/:id" element={<VideoClicked  result={result} />} />
         </Routes>
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function Home({ result }) {
       {result !== "" ? (
         <VideoCard result={result} />
       ) : (
-        <Recommended result={result} />
+        <Recommended  />
       )}
     </div>
   );
