@@ -1,6 +1,11 @@
 .app__main {
   display: flex;
-  justify-items: center;
+}
 
-  height: 100vh;
+.app__sidebar {
+  flex: 0.2;
+}
+
+.app__routes {
+  flex: 0.8;
 }

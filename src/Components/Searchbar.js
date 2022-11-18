@@ -1,7 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
+import "./Searchbar.css";
+
 export default function Searchbar({ result, setResult }) {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
@@ -12,12 +14,12 @@ export default function Searchbar({ result, setResult }) {
       if (savedInput) {
         console.log("grabbing from Storage");
         setResult(savedInput.items);
-        navigate("/videos");
+        navigate(`/videos/${search}`);
         setSearch("");
       } else {
         console.log("had to fetch homie");
         fetchData(search);
-        navigate("/videos");
+        navigate(`/videos/${search}`);
         setSearch("");
       }
     }
@@ -42,14 +44,15 @@ export default function Searchbar({ result, setResult }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <div className="header__searchBar">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            required
           />
-          <button type="submit">
+          <button className="form__button" type="submit">
             <SearchSharpIcon />
           </button>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import YouTube, { YouTubeProps } from "react-youtube";
+import YouTube from "react-youtube";
 
 export default function VideoClicked({ result, state }) {
   const { id } = useParams();

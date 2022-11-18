@@ -1,0 +1,35 @@
+.header__searchBar {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  /* border: 1px solid black;
+  border-radius: 12px;
+  background-color: white; */
+}
+
+.header__searchBar input {
+  border: none;
+  margin-left: 5px;
+  flex: 1;
+  padding: 4px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: white;
+  /* padding: 5px; */
+}
+
+.form__button {
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  /* position: sticky;
+  top: 0;
+  z-index: 1; */
+
+  /* background-color: bisque; */
+}
