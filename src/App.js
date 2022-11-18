@@ -6,16 +6,19 @@ import Home from "./Pages/Home";
 import VideoCard from "./Components/VideoCard";
 import VideoClicked from "./Components/VideoClicked";
 import Sidebar from "./Components/Sidebar";
+import Modal from "./Components/Modal";
 import "./App.css";
 
 function App() {
   const [result, setResult] = useState([]);
   const [clicked, setClicked] = useState([]);
   const [input, setInput] = useState("");
+  const [showModal, setShowModal] = useState(false);
   // BEM naming convention
   return (
     <div className="app">
       <Header
+        setShowModal={setShowModal}
         setResult={setResult}
         result={result}
         input={input}
@@ -44,6 +47,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 }

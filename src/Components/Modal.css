@@ -1,0 +1,60 @@
+.overlay {
+  background-color: rgb(157, 54, 54);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal__exit {
+  position: fixed;
+  height: 25px;
+  top: 8px;
+  right: 8px;
+  width: 25px;
+}
+
+.modal__container {
+  border: 1px solid rgb(139, 51, 51);
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+.modal__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+}
+
+.modal__rightside {
+  width: 100%;
+}
+
+.modal__redirect {
+  border-radius: 10px;
+  background-color: rgb(38, 38, 43);
+  color: rgb(224, 215, 215);
+}
+
+.modal__redirect:hover {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 105%;
+}
+
+.gify {
+  width: 250px;
+  object-fit: cover;
+}

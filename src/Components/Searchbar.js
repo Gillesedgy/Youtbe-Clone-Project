@@ -4,12 +4,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import "./Searchbar.css";
 
-export default function Searchbar({ result, setResult }) {
+export default function Searchbar({ result, setResult, setShowModal }) {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (search.length === 0) setShowModal(true);
     if (e.target.value !== "") {
       if (savedInput) {
         console.log("grabbing from Storage");
@@ -27,7 +28,7 @@ export default function Searchbar({ result, setResult }) {
 
   let savedInput = JSON.parse(window.localStorage.getItem(search));
 
-  let video_http = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&regionCode=US&maxResults=25&key=${process.env.REACT_APP_API_KEY2}`;
+  let video_http = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&regionCode=US&maxResults=25&key=${process.env.REACT_APP_API_KEY}`;
   //
 
   function fetchData(search) {
@@ -39,6 +40,7 @@ export default function Searchbar({ result, setResult }) {
       })
       .catch((err) => {
         console.log(err);
+        setShowModal(true);
       });
   }
 
@@ -50,7 +52,6 @@ export default function Searchbar({ result, setResult }) {
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            required
           />
           <button className="form__button" type="submit">
             <SearchSharpIcon />
