@@ -1,3 +1,8 @@
 .recommended {
   margin: 5px;
 }
+
+a {
+  text-decoration: none;
+  color: rgb(137, 118, 118);
+}
