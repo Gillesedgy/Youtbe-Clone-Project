@@ -27,7 +27,7 @@ export default function Searchbar({ result, setResult }) {
 
   let savedInput = JSON.parse(window.localStorage.getItem(search));
 
-  let video_http = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&regionCode=US&maxResults=25&key=${process.env.REACT_APP_API_KEY2}`;
+  let video_http = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&regionCode=US&maxResults=25&key=${process.env.REACT_APP_API_KEY}`;
   //
 
   function fetchData(search) {

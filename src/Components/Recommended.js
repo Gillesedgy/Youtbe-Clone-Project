@@ -41,7 +41,7 @@ export default function Recommended({ result }) {
             <Grid item md={4}>
               <div key={index}>
                 <Link
-                  to={`/video/${vid.id.videoId}`}
+                  to={`/video/${vid.id}`}
                   state={{ title: vid.snippet.title }}
                 >
                   <img

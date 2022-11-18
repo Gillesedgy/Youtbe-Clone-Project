@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Recommended from "./Recommended";
 import YouTube from "react-youtube";
 
 export default function VideoClicked({ result, state }) {
