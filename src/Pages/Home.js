@@ -1,16 +1,16 @@
 import React from "react";
-import VideoCard from "../Components/VideoCard";
+
 import Recommended from "../Components/Recommended";
-import Sidebar from "../Components/Sidebar";
+
+import Grid from "@mui/material/Grid";
 import "./Home.css";
+
 export default function Home({ result }) {
   return (
     <div className="home">
-      {result !== "" ? (
-        <VideoCard result={result} />
-      ) : (
-        <Recommended  />
-      )}
+      {/* // <Grid container spacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}> */}
+      <Recommended />
+      {/* // </Grid> */}
     </div>
   );
 }

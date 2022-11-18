@@ -1,0 +1,36 @@
+.about__title {
+  text-align: center;
+}
+.about__creators {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+.about__p a {
+  text-decoration: none;
+  color: purple;
+}
+.about__p a:hover {
+  text-decoration: underline;
+}
+
+.about__project {
+  margin-right: 20px;
+}
+
+.about__edgy {
+  background-color: rgb(50, 43, 43);
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  color: white;
+  margin: 8px;
+}
+
+.about__mina {
+  background-color: #ecd1d1;
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+  margin: 8px;
+}

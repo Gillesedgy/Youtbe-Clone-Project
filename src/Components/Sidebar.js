@@ -5,7 +5,6 @@ import "./Sidebar.css";
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <h1>This is the Sidebar Page</h1>
       <div className="sidebar__link">
         <Link to="/">
           <HomeSharpIcon />

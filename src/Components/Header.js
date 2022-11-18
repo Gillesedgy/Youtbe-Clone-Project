@@ -8,7 +8,7 @@ import InfoSharpIcon from "@mui/icons-material/InfoSharp";
 import { searchFetch } from "../fetch.js";
 import Searchbar from "./Searchbar";
 
-export default function Header({ setResult, result }) {
+export default function Header({ setResult, result, input, setInput }) {
   return (
     <div className="header">
       <div className="header__leftside">
@@ -23,7 +23,12 @@ export default function Header({ setResult, result }) {
           />
         </Link>
       </div>
-      <Searchbar result={result} setResult={setResult} />
+      <Searchbar
+        result={result}
+        setResult={setResult}
+        input={input}
+        setInput={setInput}
+      />
 
       <div className="header__rightside">
         <Link to="/about">

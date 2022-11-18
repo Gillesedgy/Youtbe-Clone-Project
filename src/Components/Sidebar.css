@@ -1,12 +1,23 @@
 .sidebar {
-  border: 3px green solid;
+  border: 1px rgb(67, 69, 70) solid;
   flex: 0.2;
   height: 100vh;
   position: sticky;
-  background-color: aquamarine;
+  width: 80%;
+  margin-right: 35px;
 }
 
 .sidebar__link a {
   color: black;
   text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sidebar__link:hover {
+  background-color: rgb(221, 212, 212);
+}
+
+.sidebar__link:active {
+  background-color: rgb(217, 210, 210);
 }

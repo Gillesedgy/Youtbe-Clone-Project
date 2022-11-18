@@ -21,7 +21,7 @@ export default function VideoCard({ result, videoId, setClicked }) {
         return (
           <div key={index}>
             <Link
-              to={`/videos/${vid.id.videoId}`}
+              to={`/video/${vid.id.videoId}`}
               state={{ title: vid.snippet.title }}
             >
               <img
