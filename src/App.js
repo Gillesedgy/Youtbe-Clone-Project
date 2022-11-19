@@ -11,7 +11,7 @@ function App() {
   const [input, setInput] = useState("");
   const [showModal, setShowModal] = useState(false);
   //! DARKMODE
-  const [theme, setTheme]=useState('blue')
+  // const [theme, setTheme]=useState('blue')
 
   return (
     <div className="app">
