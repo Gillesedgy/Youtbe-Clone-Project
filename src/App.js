@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Header from "./Components/Header";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import VideoCard from "./Components/VideoCard";
-import VideoClicked from "./Components/VideoClicked";
-import Sidebar from "./Components/Sidebar";
-import Modal from "./Components/Modal";
+import {Header, VideoCard, VideoClicked, Sidebar, Modal} from './Components'
+// import Header from "./Components/Header";
+// import VideoCard from "./Components/VideoCard";
+// import VideoClicked from "./Components/VideoClicked";
+// import Sidebar from "./Components/Sidebar";
+// import Modal from "./Components/Modal";
 import "./App.css";
 
 function App() {
