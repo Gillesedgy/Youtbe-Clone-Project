@@ -7,6 +7,7 @@ import "./Header.css";
 import InfoSharpIcon from "@mui/icons-material/InfoSharp";
 import { searchFetch } from "../fetch.js";
 import Searchbar from "./Searchbar";
+import ToggleSwitch from ".././BonusFeatures/ToggleSwitch"
 
 export default function Header({
   setResult,
@@ -17,6 +18,7 @@ export default function Header({
 }) {
   return (
     <div className="header">
+       <ToggleSwitch />
       <div className="header__leftside">
         <div className="menuIcon">
           <MenuIcon />
@@ -29,6 +31,7 @@ export default function Header({
           />
         </Link>
       </div>
+     
       <Searchbar
         result={result}
         setResult={setResult}
@@ -41,7 +44,8 @@ export default function Header({
         <Link to="/about">
           <InfoSharpIcon /> About
         </Link>
-      </div>
+       
+      </div> 
     </div>
   );
 }

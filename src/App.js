@@ -1,12 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Header from "./Components/Header";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import VideoCard from "./Components/VideoCard";
-import VideoClicked from "./Components/VideoClicked";
-import Sidebar from "./Components/Sidebar";
-import Modal from "./Components/Modal";
+import {Header, VideoCard, VideoClicked, Sidebar, Modal} from './Components'
 import "./App.css";
 
 function App() {
@@ -14,7 +10,9 @@ function App() {
   const [clicked, setClicked] = useState([]);
   const [input, setInput] = useState("");
   const [showModal, setShowModal] = useState(false);
-  // BEM naming convention
+  //! DARKMODE
+  // const [theme, setTheme]=useState('blue')
+
   return (
     <div className="app">
       <Header
