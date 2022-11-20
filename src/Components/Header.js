@@ -20,11 +20,11 @@ export default function Header({
 }) {
   return (
     <div className="header">
-      <ToggleSwitch darkmode={darkmode} setDarkmode={setDarkmode} />
       <div className="header__leftside">
         <div className="menuIcon">
           <MenuIcon />
         </div>
+        <ToggleSwitch darkmode={darkmode} setDarkmode={setDarkmode} />
         <Link to="/">
           <img
             className="header__logo"

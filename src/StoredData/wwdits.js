@@ -711,3 +711,5 @@ const wwdits = [
     ],
   },
 ];
+
+export default wwdits;

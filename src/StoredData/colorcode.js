@@ -11,34 +11,6 @@ const colorCode = [
     items: [
       {
         kind: "youtube#searchResult",
-        etag: "FasuxchWjqnsBJcsu5ZsZCx0vKg",
-        id: {
-          kind: "youtube#channel",
-          channelId: "UCHa8J-xnRYOg5VuudfWpBgg",
-        },
-        snippet: {
-          publishedAt: "2016-04-27T19:23:48Z",
-          channelId: "UCHa8J-xnRYOg5VuudfWpBgg",
-          title: "ColorCode",
-          description: "Coding Tutorials that actually help you learn! ‍",
-          thumbnails: {
-            default: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu9-rWN8tZS4PymNC0FIFSUZ9zbqqpmqnjIbS-Pxmw=s88-c-k-c0xffffffff-no-rj-mo",
-            },
-            medium: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu9-rWN8tZS4PymNC0FIFSUZ9zbqqpmqnjIbS-Pxmw=s240-c-k-c0xffffffff-no-rj-mo",
-            },
-            high: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu9-rWN8tZS4PymNC0FIFSUZ9zbqqpmqnjIbS-Pxmw=s800-c-k-c0xffffffff-no-rj-mo",
-            },
-          },
-          channelTitle: "ColorCode",
-          liveBroadcastContent: "upcoming",
-          publishTime: "2016-04-27T19:23:48Z",
-        },
-      },
-      {
-        kind: "youtube#searchResult",
         etag: "MNRXq5knKbk3S9oP89YlVudL_KM",
         id: {
           kind: "youtube#video",
@@ -72,64 +44,7 @@ const colorCode = [
           publishTime: "2022-10-10T11:59:44Z",
         },
       },
-      {
-        kind: "youtube#searchResult",
-        etag: "OWSCWJyVM_BWg9OViXdDP22u5cs",
-        id: {
-          kind: "youtube#channel",
-          channelId: "UCkVVt8moA3ZZCtqmvq3i89g",
-        },
-        snippet: {
-          publishedAt: "2014-07-10T09:44:31Z",
-          channelId: "UCkVVt8moA3ZZCtqmvq3i89g",
-          title: "color-code official",
-          description:
-            '【color-code official channel】 三色の個性が集まった、「多様性」を追求するダンスボーカル "color-code"。 時にストイックに、 ...',
-          thumbnails: {
-            default: {
-              url: "https://yt3.ggpht.com/WgBys8xjoCvqp_qm5jfFyhSPJ4SN2iO0CilO8w4KPcH6KowTRhHLT8h1Lqvp4B1mei8VIQSplg=s88-c-k-c0xffffffff-no-rj-mo",
-            },
-            medium: {
-              url: "https://yt3.ggpht.com/WgBys8xjoCvqp_qm5jfFyhSPJ4SN2iO0CilO8w4KPcH6KowTRhHLT8h1Lqvp4B1mei8VIQSplg=s240-c-k-c0xffffffff-no-rj-mo",
-            },
-            high: {
-              url: "https://yt3.ggpht.com/WgBys8xjoCvqp_qm5jfFyhSPJ4SN2iO0CilO8w4KPcH6KowTRhHLT8h1Lqvp4B1mei8VIQSplg=s800-c-k-c0xffffffff-no-rj-mo",
-            },
-          },
-          channelTitle: "color-code official",
-          liveBroadcastContent: "upcoming",
-          publishTime: "2014-07-10T09:44:31Z",
-        },
-      },
-      {
-        kind: "youtube#searchResult",
-        etag: "Rve9q3X92Ql_DBlNlf5lYS6TEaU",
-        id: {
-          kind: "youtube#channel",
-          channelId: "UCJFI7Dd7DNzAvXLvTIOrQYg",
-        },
-        snippet: {
-          publishedAt: "2020-10-11T18:13:25Z",
-          channelId: "UCJFI7Dd7DNzAvXLvTIOrQYg",
-          title: "Color Code",
-          description:
-            "Your destination for procrastination. All are welcome! Reactions, challenges, quizzes, social experiments, they're all yours. Follow ...",
-          thumbnails: {
-            default: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu8v8z4eAidau-s45z-qbN6sBBs7FwI245hr-AkP=s88-c-k-c0xffffffff-no-rj-mo",
-            },
-            medium: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu8v8z4eAidau-s45z-qbN6sBBs7FwI245hr-AkP=s240-c-k-c0xffffffff-no-rj-mo",
-            },
-            high: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu8v8z4eAidau-s45z-qbN6sBBs7FwI245hr-AkP=s800-c-k-c0xffffffff-no-rj-mo",
-            },
-          },
-          channelTitle: "Color Code",
-          liveBroadcastContent: "none",
-          publishTime: "2020-10-11T18:13:25Z",
-        },
-      },
+
       {
         kind: "youtube#searchResult",
         etag: "YBPG9L9eKEiGH17sl3D062hJoT4",
@@ -271,35 +186,7 @@ const colorCode = [
           publishTime: "2018-01-11T12:35:38Z",
         },
       },
-      {
-        kind: "youtube#searchResult",
-        etag: "MijSARf-62vpkBoKCeZR9RVcFEA",
-        id: {
-          kind: "youtube#channel",
-          channelId: "UCM7hPzaqbTlPgTtXDCF0K_w",
-        },
-        snippet: {
-          publishedAt: "2020-02-06T06:45:37Z",
-          channelId: "UCM7hPzaqbTlPgTtXDCF0K_w",
-          title: "color-code for women",
-          description:
-            '【color-code for women channel】 三色の個性が集まった、「多様性」を追求するダンスボーカル "color-code"。 時にストイック ...',
-          thumbnails: {
-            default: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu8cJdCZW1utTo9kJbFuHWGjTSiYftP-xDQAjegj=s88-c-k-c0xffffffff-no-rj-mo",
-            },
-            medium: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu8cJdCZW1utTo9kJbFuHWGjTSiYftP-xDQAjegj=s240-c-k-c0xffffffff-no-rj-mo",
-            },
-            high: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu8cJdCZW1utTo9kJbFuHWGjTSiYftP-xDQAjegj=s800-c-k-c0xffffffff-no-rj-mo",
-            },
-          },
-          channelTitle: "color-code for women",
-          liveBroadcastContent: "upcoming",
-          publishTime: "2020-02-06T06:45:37Z",
-        },
-      },
+
       {
         kind: "youtube#searchResult",
         etag: "0UKRWkNpD906q_zRVZK2CrGCTm0",
@@ -688,3 +575,5 @@ const colorCode = [
     ],
   },
 ];
+
+export default colorCode;

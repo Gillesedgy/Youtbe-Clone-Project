@@ -509,62 +509,7 @@ const codinglofi = [
           publishTime: "2021-03-09T16:07:05Z",
         },
       },
-      {
-        kind: "youtube#searchResult",
-        etag: "mTdHjnua57LnVYiunoowbAFLYGA",
-        id: {
-          kind: "youtube#channel",
-          channelId: "UCFAjhpHy_01tI-ffzBaICKw",
-        },
-        snippet: {
-          publishedAt: "2021-05-21T08:44:21Z",
-          channelId: "UCFAjhpHy_01tI-ffzBaICKw",
-          title: "CodingLofi",
-          description: "",
-          thumbnails: {
-            default: {
-              url: "https://yt3.ggpht.com/ynUDX2lTQh1ENfBwLMkYE6IwSkPB4VPzqR_jdrDMiKWdbL9zXsC9JVu4VEY2g7mGR3O3ofsO6w=s88-c-k-c0xffffffff-no-rj-mo",
-            },
-            medium: {
-              url: "https://yt3.ggpht.com/ynUDX2lTQh1ENfBwLMkYE6IwSkPB4VPzqR_jdrDMiKWdbL9zXsC9JVu4VEY2g7mGR3O3ofsO6w=s240-c-k-c0xffffffff-no-rj-mo",
-            },
-            high: {
-              url: "https://yt3.ggpht.com/ynUDX2lTQh1ENfBwLMkYE6IwSkPB4VPzqR_jdrDMiKWdbL9zXsC9JVu4VEY2g7mGR3O3ofsO6w=s800-c-k-c0xffffffff-no-rj-mo",
-            },
-          },
-          channelTitle: "CodingLofi",
-          liveBroadcastContent: "none",
-          publishTime: "2021-05-21T08:44:21Z",
-        },
-      },
-      {
-        kind: "youtube#searchResult",
-        etag: "_SXXXu8a9NXSJ6Du6YB7ZdfQn7U",
-        id: {
-          kind: "youtube#channel",
-          channelId: "UCEcCTb5llQy9_doDBtzrhNw",
-        },
-        snippet: {
-          publishedAt: "2021-10-11T18:37:05Z",
-          channelId: "UCEcCTb5llQy9_doDBtzrhNw",
-          title: "CodingLofi",
-          description: "Lofi Hip Hop.",
-          thumbnails: {
-            default: {
-              url: "https://yt3.ggpht.com/MpY-LEUcoikqVcfujOya6yq6fhHPFAK66PFQmgicVcalOcManiGOjebdRfLDeUiVjTR7QecJxQ=s88-c-k-c0xffffffff-no-rj-mo",
-            },
-            medium: {
-              url: "https://yt3.ggpht.com/MpY-LEUcoikqVcfujOya6yq6fhHPFAK66PFQmgicVcalOcManiGOjebdRfLDeUiVjTR7QecJxQ=s240-c-k-c0xffffffff-no-rj-mo",
-            },
-            high: {
-              url: "https://yt3.ggpht.com/MpY-LEUcoikqVcfujOya6yq6fhHPFAK66PFQmgicVcalOcManiGOjebdRfLDeUiVjTR7QecJxQ=s800-c-k-c0xffffffff-no-rj-mo",
-            },
-          },
-          channelTitle: "CodingLofi",
-          liveBroadcastContent: "none",
-          publishTime: "2021-10-11T18:37:05Z",
-        },
-      },
+
       {
         kind: "youtube#searchResult",
         etag: "5JNtr6DmN0bz36mWxAHHaFFHVck",
@@ -711,3 +656,5 @@ const codinglofi = [
     ],
   },
 ];
+
+export default codinglofi;

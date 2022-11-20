@@ -20,7 +20,10 @@ export default function Modal({ showModal, setShowModal }) {
             className="modal__exit"
             src={closeWindow}
             alt="x"
-            onClick={() => setShowModal(false)}
+            onClick={() => {
+              setShowModal(false);
+              navigate("/");
+            }}
           />
           <div className="modal__content">
             <p> Sorry! You need to type in a search to see the magic!</p>

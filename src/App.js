@@ -3,6 +3,9 @@ import { useState } from "react";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import { Header, VideoCard, VideoClicked, Sidebar, Modal } from "./Components";
+import Webdev from "./Pages/Webdev";
+import Colorcode from "./Pages/Colorcode";
+import WWDITS from "./Pages/WWDITS";
 import "./App.css";
 import ToggleSwitch from "././BonusFeatures/ToggleSwitch";
 
@@ -11,7 +14,7 @@ function App() {
   const [clicked, setClicked] = useState([]);
   const [input, setInput] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [darkmode, setDarkmode] = useState("black");
+  const [darkmode, setDarkmode] = useState("white");
 
   //! DARKMODE
   // const [theme, setTheme]=useState('blue')
@@ -47,6 +50,9 @@ function App() {
               path="/video/:id"
               element={<VideoClicked clicked={clicked} />}
             />
+            <Route path="/webdev" element={<Webdev />} />
+            <Route path="/colorcode" element={<Colorcode />} />
+            <Route path="/wwdits" element={<WWDITS />} />
           </Routes>
         </div>
       </div>

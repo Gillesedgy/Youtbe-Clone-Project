@@ -18,6 +18,18 @@ export default function Sidebar({ darkmode }) {
           Home
         </Link>
       </div>
+      <hr></hr>
+      <div>
+        <Link to="/webdev">WebDev</Link>
+      </div>
+      <hr></hr>
+      <div>
+        <Link to="/colorcode">ColorCode</Link>
+      </div>
+      <hr></hr>
+      <div>
+        <Link to="/wwdits">What We Do in the Shadows</Link>
+      </div>
     </div>
   );
 }

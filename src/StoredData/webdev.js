@@ -11,35 +11,6 @@ const webdev = [
     items: [
       {
         kind: "youtube#searchResult",
-        etag: "tVtGSobGd5tY_If8zGzrvUA4mug",
-        id: {
-          kind: "youtube#channel",
-          channelId: "UCFbNIlppjAuEX4znoulh0Cw",
-        },
-        snippet: {
-          publishedAt: "2018-05-24T16:26:39Z",
-          channelId: "UCFbNIlppjAuEX4znoulh0Cw",
-          title: "Web Dev Simplified",
-          description:
-            "Web Dev Simplified is all about teaching web development skills and techniques in an efficient and practical manner. If you are ...",
-          thumbnails: {
-            default: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu-PjRc81p0qP-ZPWxv8aY4k-4gFRzGEYs3HWbIQ=s88-c-k-c0xffffffff-no-rj-mo",
-            },
-            medium: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu-PjRc81p0qP-ZPWxv8aY4k-4gFRzGEYs3HWbIQ=s240-c-k-c0xffffffff-no-rj-mo",
-            },
-            high: {
-              url: "https://yt3.ggpht.com/ytc/AMLnZu-PjRc81p0qP-ZPWxv8aY4k-4gFRzGEYs3HWbIQ=s800-c-k-c0xffffffff-no-rj-mo",
-            },
-          },
-          channelTitle: "Web Dev Simplified",
-          liveBroadcastContent: "none",
-          publishTime: "2018-05-24T16:26:39Z",
-        },
-      },
-      {
-        kind: "youtube#searchResult",
         etag: "KMePM4Ww6-CUK3Jhe1DKjeW3WKs",
         id: {
           kind: "youtube#video",
@@ -143,41 +114,7 @@ const webdev = [
           publishTime: "2022-08-04T16:00:17Z",
         },
       },
-      {
-        kind: "youtube#searchResult",
-        etag: "86ZGQAtshU6CajHLEAW_Phzfces",
-        id: {
-          kind: "youtube#playlist",
-          playlistId: "PLZlA0Gpn_vH9xx-RRVNG187ETT2ekWFsq",
-        },
-        snippet: {
-          publishedAt: "2019-05-31T01:24:29Z",
-          channelId: "UCFbNIlppjAuEX4znoulh0Cw",
-          title: "New Web Developers Start Here",
-          description:
-            "If you are brand new to web development this playlist is for you. These videos will teach you HTML, CSS, and JavaScript through ...",
-          thumbnails: {
-            default: {
-              url: "https://i.ytimg.com/vi/HfTXHrWMGVY/default.jpg",
-              width: 120,
-              height: 90,
-            },
-            medium: {
-              url: "https://i.ytimg.com/vi/HfTXHrWMGVY/mqdefault.jpg",
-              width: 320,
-              height: 180,
-            },
-            high: {
-              url: "https://i.ytimg.com/vi/HfTXHrWMGVY/hqdefault.jpg",
-              width: 480,
-              height: 360,
-            },
-          },
-          channelTitle: "Web Dev Simplified",
-          liveBroadcastContent: "none",
-          publishTime: "2019-05-31T01:24:29Z",
-        },
-      },
+
       {
         kind: "youtube#searchResult",
         etag: "Hjius0ne7YR0Yf-b05zYhqqLLOo",
@@ -530,74 +467,7 @@ const webdev = [
           publishTime: "2022-10-11T16:00:19Z",
         },
       },
-      {
-        kind: "youtube#searchResult",
-        etag: "AcRavgemjg9Q2NVC_Wng4DN38HQ",
-        id: {
-          kind: "youtube#playlist",
-          playlistId: "PLZlA0Gpn_vH9D0J0Mtp6lIiD_8046k3si",
-        },
-        snippet: {
-          publishedAt: "2018-08-30T11:35:43Z",
-          channelId: "UCFbNIlppjAuEX4znoulh0Cw",
-          title: "Introduction to CSS",
-          description: "",
-          thumbnails: {
-            default: {
-              url: "https://i.ytimg.com/vi/1PnVor36_40/default.jpg",
-              width: 120,
-              height: 90,
-            },
-            medium: {
-              url: "https://i.ytimg.com/vi/1PnVor36_40/mqdefault.jpg",
-              width: 320,
-              height: 180,
-            },
-            high: {
-              url: "https://i.ytimg.com/vi/1PnVor36_40/hqdefault.jpg",
-              width: 480,
-              height: 360,
-            },
-          },
-          channelTitle: "Web Dev Simplified",
-          liveBroadcastContent: "none",
-          publishTime: "2018-08-30T11:35:43Z",
-        },
-      },
-      {
-        kind: "youtube#searchResult",
-        etag: "IxILMZrzOcDxxKI8BWwOxmaQaQk",
-        id: {
-          kind: "youtube#playlist",
-          playlistId: "PLZlA0Gpn_vH_NT5zPVp18nGe_W9LqBDQK",
-        },
-        snippet: {
-          publishedAt: "2019-08-23T15:33:30Z",
-          channelId: "UCFbNIlppjAuEX4znoulh0Cw",
-          title: "React",
-          description: "",
-          thumbnails: {
-            default: {
-              url: "https://i.ytimg.com/vi/1wZoGFF_oi4/default.jpg",
-              width: 120,
-              height: 90,
-            },
-            medium: {
-              url: "https://i.ytimg.com/vi/1wZoGFF_oi4/mqdefault.jpg",
-              width: 320,
-              height: 180,
-            },
-            high: {
-              url: "https://i.ytimg.com/vi/1wZoGFF_oi4/hqdefault.jpg",
-              width: 480,
-              height: 360,
-            },
-          },
-          channelTitle: "Web Dev Simplified",
-          liveBroadcastContent: "none",
-          publishTime: "2019-08-23T15:33:30Z",
-        },
-      },
+
       {
         kind: "youtube#searchResult",
         etag: "BRTiEVSRhVw8kpXefyFH6WtWplM",
@@ -705,3 +575,5 @@ const webdev = [
     ],
   },
 ];
+
+export default webdev;
