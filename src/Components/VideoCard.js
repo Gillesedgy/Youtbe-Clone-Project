@@ -30,6 +30,8 @@ export default function VideoCard({ result, videoId, setClicked }) {
               />
               <h5>{vid.snippet.title}</h5>
               <p>{vid.snippet.description}</p>
+              {(vid.comments = [])}
+              {console.log(vid)}
             </Link>
           </div>
         );

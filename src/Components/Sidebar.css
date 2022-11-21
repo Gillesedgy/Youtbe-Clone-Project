@@ -5,6 +5,8 @@
   position: sticky;
   width: 80%;
   margin-right: 35px;
+  padding: 5px;
+  line-height: 3;
 }
 
 .sidebar__link a {

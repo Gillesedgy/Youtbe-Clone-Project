@@ -11,10 +11,10 @@ import ToggleSwitch from "././BonusFeatures/ToggleSwitch";
 
 function App() {
   const [result, setResult] = useState([]);
-  const [clicked, setClicked] = useState([]);
   const [input, setInput] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [darkmode, setDarkmode] = useState("white");
+  const [comment, setComment] = useState([]);
 
   //! DARKMODE
   // const [theme, setTheme]=useState('blue')
@@ -44,11 +44,13 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route
               path="/videos/:userSearch"
-              element={<VideoCard result={result} setClicked={setClicked} />}
+              element={<VideoCard result={result} comment={comment} />}
             />
             <Route
               path="/video/:id"
-              element={<VideoClicked clicked={clicked} />}
+              element={
+                <VideoClicked setComment={setComment} comment={comment} />
+              }
             />
             <Route path="/webdev" element={<Webdev />} />
             <Route path="/colorcode" element={<Colorcode />} />

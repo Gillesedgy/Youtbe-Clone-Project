@@ -1,0 +1,42 @@
+#comments {
+  display: block;
+  margin: 6px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#comments:hover {
+  background-color: rgb(247, 247, 217);
+}
+
+#name__input {
+  border-radius: 20px;
+  display: flex;
+  margin: 6px;
+  padding: 3px;
+}
+
+#name__input:hover {
+  background-color: rgb(247, 247, 217);
+}
+
+.comment__box {
+  display: flex;
+  padding: 8px;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background-color: rgb(255, 193, 193);
+}
+
+.comment__button {
+  margin-top: 25px;
+  height: 20px;
+  padding: 3px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.comment__button:hover {
+  font-weight: bold;
+}

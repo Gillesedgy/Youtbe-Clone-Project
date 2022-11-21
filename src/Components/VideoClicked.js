@@ -1,9 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Comments from "./Comments";
 import Recommended from "./Recommended";
 import YouTube from "react-youtube";
 
-export default function VideoClicked({ result, state }) {
+export default function VideoClicked({ setComment, comment }) {
   const { id } = useParams();
   const opts = {
     videoId: id,
@@ -21,6 +22,11 @@ export default function VideoClicked({ result, state }) {
   return (
     <div className="videoClicked">
       <YouTube videoId={id} opts={opts} />
+      <br></br>
+      <hr></hr>
+      <div className="comment_section">
+        <Comments setComment={setComment} comment={comment} />
+      </div>
     </div>
   );
 }
