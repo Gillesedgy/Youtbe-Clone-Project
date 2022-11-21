@@ -28,7 +28,7 @@ export default function Sidebar({ darkmode }) {
       </div>
       <hr></hr>
       <div>
-        <Link to="/wwdits">What We Do in the Shadows</Link>
+        <Link to="/wwdits">WWDITS</Link>
       </div>
     </div>
   );
