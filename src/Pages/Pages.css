@@ -1,13 +1,11 @@
-.recommended {
-  margin: 5px;
+.thumbnail {
+  border-radius: 10px;
+  width: 90%;
+  margin-left: 14px;
+  display: flex;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(137, 118, 118);
-}
-
-.videocard {
+.video_card {
   border: 1px grey solid;
   background-color: rgb(247, 247, 247);
   border-radius: 20px;

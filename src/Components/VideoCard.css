@@ -1,0 +1,20 @@
+.video__card {
+  border: 1px grey solid;
+  background-color: rgb(247, 247, 247);
+  border-radius: 20px;
+  line-height: 2;
+  padding: 12px;
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+.video__img {
+  border-radius: 20px;
+  width: 40%;
+  height: 40%;
+}
+
+/* .img__div {
+} */
