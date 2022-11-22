@@ -35,16 +35,18 @@ export default function Recommended({ result }) {
   return (
     <div className="recommended">
       <h3>Recommended</h3>
+      <br></br>
       <Grid container spacing={3}>
         {rec.map((vid, index) => {
           return (
-            <Grid item md={4}>
-              <div key={index}>
+            <Grid item md={4} key={index}>
+              <div key={index} className="videocard">
                 <Link
                   to={`/video/${vid.id}`}
                   state={{ title: vid.snippet.title }}
                 >
                   <img
+                    className="thumbnail"
                     src={vid.snippet.thumbnails.medium.url}
                     alt={vid.snippet.title}
                   />

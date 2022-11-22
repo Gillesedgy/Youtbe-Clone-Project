@@ -4,7 +4,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import "./Searchbar.css";
 
-export default function Searchbar({ result, setResult, setShowModal }) {
+export default function Searchbar({
+  result,
+  setResult,
+  setShowModal,
+  input,
+  setInput,
+}) {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
@@ -15,11 +21,13 @@ export default function Searchbar({ result, setResult, setShowModal }) {
       if (savedInput) {
         console.log("grabbing from Storage");
         setResult(savedInput.items);
+        setInput(savedInput.items);
         navigate(`/videos/${search}`);
         setSearch("");
       } else {
         console.log("had to fetch homie");
         fetchData(search);
+        setInput(result);
         navigate(`/videos/${search}`);
         setSearch("");
       }
