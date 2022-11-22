@@ -14,7 +14,6 @@ function App() {
   const [input, setInput] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [darkmode, setDarkmode] = useState("white");
-  const [comment, setComment] = useState([]);
 
   //! DARKMODE
   // const [theme, setTheme]=useState('blue')
@@ -44,14 +43,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route
               path="/videos/:userSearch"
-              element={<VideoCard result={result} comment={comment} />}
+              element={<VideoCard result={result} />}
             />
-            <Route
-              path="/video/:id"
-              element={
-                <VideoClicked setComment={setComment} comment={comment} />
-              }
-            />
+            <Route path="/video/:id" element={<VideoClicked />} />
             <Route path="/webdev" element={<Webdev />} />
             <Route path="/colorcode" element={<Colorcode />} />
             <Route path="/wwdits" element={<WWDITS />} />

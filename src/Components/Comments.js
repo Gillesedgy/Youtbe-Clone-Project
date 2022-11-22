@@ -3,25 +3,24 @@ import { useState } from "react";
 import Paper from "@mui/material/Paper";
 import "./Comments.css";
 
-export default function Comments({ comment, setComment }) {
-  //   const [comment, setComment] = useState("");
-  const [name, setName] = useState("");
+export default function Comments({ comment, setComment, vid }) {
+  const [remark, setRemark] = useState({ commenter: "", comment: "" });
 
-  function handleComments(e) {
+  //! handleSubmit
+  function handleSubmit(e) {
     e.preventDefault();
+    // handleComment();
     addComments();
-    setComment("");
-    setName("");
   }
-
+  //! handleComment function
+  //* do not put brackets arounf the value EDGYY!!!!!
+  function handleComment(e) {
+    setRemark({ ...remark, [e.target.id]: e.target.value });
+  }
   function addComments() {
-    const newComment = {
-      ...comment,
-      commenter: name,
-      comment: comment,
-    };
-
-    setComment(newComment);
+    const commentList = [...comment];
+    commentList.push(remark);
+    setComment(commentList);
   }
   return (
     <div>
@@ -31,23 +30,23 @@ export default function Comments({ comment, setComment }) {
         elevation={3}
         sx={{ borderRadius: 20, border: "1px solid #E3E3E3" }}
         component="form"
-        onSubmit={handleComments}
+        onSubmit={handleSubmit}
       >
         <div className="comment__box">
           <input
             type="text"
-            id="name__input"
+            id="commenter"
             placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={remark.commenter}
+            onChange={handleComment}
           />
           {/* {/* <br></br> */}
           <input
             type="text"
-            id="comments"
+            id="comment"
             placeholder="Add a comment!"
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
+            value={remark.comment}
+            onChange={handleComment}
           />
           <input className="comment__button" type="submit" value="Submit!" />
         </div>
@@ -55,7 +54,16 @@ export default function Comments({ comment, setComment }) {
       <br></br>
       <hr></hr>
       <hr></hr>
-      <ul>{console.log(comment)}</ul>
+      <ul>
+        {comment.map((comm, index) => {
+          return (
+            <li key={index} className="comment__list">
+              <b>{comm.commenter}</b>: {comm.comment}
+            </li>
+          );
+        })}
+        {console.log(comment)}
+      </ul>
     </div>
   );
 }

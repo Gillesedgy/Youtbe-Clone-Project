@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Comments from "./Comments";
-import Recommended from "./Recommended";
+// import Recommended from "./Recommended";
 import YouTube from "react-youtube";
+import { CommentBankRounded } from "@mui/icons-material";
 
-export default function VideoClicked({ setComment, comment, input }) {
+export default function VideoClicked({ input }) {
   const { id } = useParams();
   const [vid, setVid] = useState([]);
   const [click, setClick] = useState([]);
+  const [comment, setComment] = useState([]);
   const opts = {
     videoId: id,
     autoplay: true,
@@ -20,6 +22,11 @@ export default function VideoClicked({ setComment, comment, input }) {
     height: "390",
     aspectRatio: "16:9",
   };
+
+  //! function for newComments
+  function handleComments(newComment) {
+    setComment([...comment, newComment]);
+  }
 
   let saved = JSON.parse(window.localStorage.getItem("title"));
   let date;
@@ -59,6 +66,18 @@ export default function VideoClicked({ setComment, comment, input }) {
             <p>Views: {video.statistics.viewCount}</p>
             <p>Likes: {video.statistics.likeCount}</p>
             <span>Comment count: {video.statistics.commentCount}</span>
+            {/* {(vid.comments = [])} */}
+
+            {console.log(vid.comments)}
+            <div className="comment_section">
+              <Comments
+                // handleComments={handleComments}
+                vid={vid}
+                setComment={setComment}
+                comment={comment}
+                input={input}
+              />
+            </div>
             {/* {(date = new Date(video.snippet.publishedAt))}
             <p>
               Date Published:{" "}
@@ -72,9 +91,6 @@ export default function VideoClicked({ setComment, comment, input }) {
 
       <br></br>
       <hr></hr>
-      <div className="comment_section">
-        <Comments setComment={setComment} comment={comment} input={input} />
-      </div>
     </div>
   );
 }
