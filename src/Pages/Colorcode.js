@@ -4,12 +4,13 @@ import colorcode from "../StoredData/colorcode";
 import Grid from "@mui/material/Grid";
 import "./Pages.css";
 
-export default function Colorcode() {
+export default function Colorcode({ darkmode }) {
   const items = colorcode[0].items;
   return (
-    <div>
-      <h2>Colorcode</h2>
-      <div className="videocard">
+    <div className={darkmode ? "darkMode" : "default"}>
+      <h2 style={{ color: darkmode ? "white" : "black" }}>Colorcode</h2>
+      <br />
+      <div>
         <Grid container spacing={3}>
           {items.map((vid, index) => {
             return (
@@ -26,8 +27,6 @@ export default function Colorcode() {
                       alt={vid.snippet.title}
                     />
                     <h5>{vid.snippet.title}</h5>
-
-                    {/* <p>{vid.snippet.description}</p> */}
                   </Link>
                   <br></br>
                 </div>

@@ -4,11 +4,12 @@ import webdev from "../StoredData/webdev";
 import Grid from "@mui/material/Grid";
 import "./Pages.css";
 
-export default function Webdev() {
+export default function Webdev({ darkmode }) {
   const items = webdev[0].items;
   return (
-    <div>
-      <h2>WebDev</h2>
+    <div className={darkmode ? "darkMode" : "default"}>
+      <h2 style={{ color: darkmode ? "white" : "black" }}>WebDev</h2>
+      <br></br>
       <Grid container spacing={3}>
         {items.map((vid, index) => {
           return (

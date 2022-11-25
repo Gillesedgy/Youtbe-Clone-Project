@@ -6,13 +6,18 @@
   position: sticky;
   z-index: 100;
   top: 0;
+}
+.darkMode {
+  background-color: #282828;
+}
+.default {
   background-color: #fff;
 }
-
 .header__logo {
   height: 60px;
   width: 80px;
   object-fit: contain;
+  /* opacity: 50%; */
 }
 
 .header__leftside {

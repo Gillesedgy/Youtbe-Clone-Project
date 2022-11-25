@@ -2,16 +2,25 @@ import "./ToggleSwitch.css";
 import { useEffect, useState } from "react";
 
 function ToggleSwitch({ darkmode, setDarkmode }) {
+  const [color, setColor] = useState("white");
+
   const handleTheme = (darkmode) => {
-    if (darkmode === "black") {
-      setDarkmode("white");
+    if (darkmode === true) {
+      setDarkmode(false);
+      setColor("white");
+      // handleBackground(color);
     } else {
-      setDarkmode("black");
+      setColor("#282828");
+      setDarkmode(true);
+      // handleBackground(color);
     }
   };
+
   useEffect(() => {
-    document.body.style.backgroundColor = darkmode;
-  }, [darkmode]);
+    // const handleBackground = (color) => {
+    document.body.style.backgroundColor = color;
+  }, [color]);
+  // };
   return (
     <div className="switch__container">
       {/* button  basic for now just for functionality */}

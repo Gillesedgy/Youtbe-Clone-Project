@@ -7,16 +7,14 @@ import Webdev from "./Pages/Webdev";
 import Colorcode from "./Pages/Colorcode";
 import WWDITS from "./Pages/WWDITS";
 import "./App.css";
-import ToggleSwitch from "././BonusFeatures/ToggleSwitch";
+// import ToggleSwitch from "././BonusFeatures/ToggleSwitch";
+// import { DarkMode } from "@mui/icons-material";
 
 function App() {
   const [result, setResult] = useState([]);
   const [input, setInput] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [darkmode, setDarkmode] = useState("white");
-
-  //! DARKMODE
-  // const [theme, setTheme]=useState('blue')
+  const [darkmode, setDarkmode] = useState(false);
 
   return (
     <div className="app">
@@ -29,7 +27,7 @@ function App() {
         darkmode={darkmode}
         setDarkmode={setDarkmode}
       />
-      {/* add the fetch to the header component for when th user types into the search bar */}
+
       <div className="app__main">
         <div className="app__sidebar">
           <Sidebar darkmode={darkmode} />
@@ -38,7 +36,13 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<Home result={result} setResult={setResult} />}
+              element={
+                <Home
+                  result={result}
+                  setResult={setResult}
+                  darkmode={darkmode}
+                />
+              }
             />
             <Route path="/about" element={<About />} />
             <Route
@@ -46,9 +50,12 @@ function App() {
               element={<VideoCard result={result} />}
             />
             <Route path="/video/:id" element={<VideoClicked />} />
-            <Route path="/webdev" element={<Webdev />} />
-            <Route path="/colorcode" element={<Colorcode />} />
-            <Route path="/wwdits" element={<WWDITS />} />
+            <Route path="/webdev" element={<Webdev darkmode={darkmode} />} />
+            <Route
+              path="/colorcode"
+              element={<Colorcode darkmode={darkmode} />}
+            />
+            <Route path="/wwdits" element={<WWDITS darkmode={darkmode} />} />
           </Routes>
         </div>
       </div>

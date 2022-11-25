@@ -4,11 +4,14 @@ import wwdits from "../StoredData/wwdits";
 import Grid from "@mui/material/Grid";
 import "./Pages.css";
 
-export default function WWDITS() {
+export default function WWDITS({ darkmode }) {
   const items = wwdits[0].items;
   return (
-    <div>
-      <h2>What We Do In The Shadows</h2>
+    <div className={darkmode ? "darkMode" : "default"}>
+      <h2 style={{ color: darkmode ? "white" : "black" }}>
+        What We Do In The Shadows
+      </h2>
+      <br />
       <Grid container spacing={3}>
         {items.map((vid, index) => {
           return (

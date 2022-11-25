@@ -29,7 +29,7 @@ export default function About() {
       <div className="about__creators">
         <article className="about__edgy">
           <h4>
-            <em>About Mr.Edgy</em>
+            <em>About Edgy</em>
           </h4>
           <p>
             🌱 I’m currently learning Git commands and React.js
@@ -43,7 +43,7 @@ export default function About() {
         </article>
         <article className="about__mina">
           <h4>
-            <em>About Moe</em>
+            <em>About Mina</em>
           </h4>
           <p>
             🌱 I’m currently learning about React.js

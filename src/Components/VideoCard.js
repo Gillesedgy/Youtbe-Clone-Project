@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./VideoCard.css";
 import Grid from "@mui/material/Grid";
 
-export default function VideoCard({ result, videoId, setClicked }) {
+export default function VideoCard({ result }) {
   const { id } = useParams();
 
   //import new URL for fetching

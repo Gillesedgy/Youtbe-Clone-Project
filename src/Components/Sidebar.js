@@ -6,29 +6,39 @@ import "./Sidebar.css";
 
 export default function Sidebar({ darkmode }) {
   return (
-    <div className="sidebar">
-      <div className="sidebar__link">
-        <Link to="/">
-          {/* {darkmode === "white" ? (
-            <HomeSharpIcon theme="white" />
-          ) : (
-            <HomeSharpIcon theme="black" />
-          )} */}
-          <HomeSharpIcon />
-          Home
-        </Link>
-      </div>
-      <hr></hr>
-      <div>
-        <Link to="/webdev">WebDev</Link>
-      </div>
-      <hr></hr>
-      <div>
-        <Link to="/colorcode">ColorCode</Link>
-      </div>
-      <hr></hr>
-      <div>
-        <Link to="/wwdits">WWDITS</Link>
+    <div className={darkmode ? "darkMode" : "default"}>
+      <div className="sidebar">
+        <div className="sidebar__link">
+          <Link to="/">
+            {darkmode ? (
+              <HomeSharpIcon style={{ color: "red" }} />
+            ) : (
+              <HomeSharpIcon />
+            )}
+
+            <span style={{ color: darkmode ? "white" : "black" }}>Home</span>
+          </Link>
+        </div>
+        <hr></hr>
+        <div className="sidebar__link">
+          <Link to="/webdev">
+            <span style={{ color: darkmode ? "white" : "black" }}>WebDev</span>
+          </Link>
+        </div>
+        <hr></hr>
+        <div className="sidebar__link">
+          <Link to="/colorcode">
+            <span style={{ color: darkmode ? "white" : "black" }}>
+              ColorCode
+            </span>
+          </Link>
+        </div>
+        <hr></hr>
+        <div className="sidebar__link">
+          <Link to="/wwdits">
+            <span style={{ color: darkmode ? "white" : "black" }}>WWDITS</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

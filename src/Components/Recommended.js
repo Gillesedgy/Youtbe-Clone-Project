@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import "./Recommended.css";
 import Grid from "@mui/material/Grid";
 
-export default function Recommended({ result }) {
+export default function Recommended({ result, darkmode }) {
   // This will display the thumbnails and cideo descriptiion for user to click on
   const [rec, setRec] = useState([]);
   const { id } = useParams();
@@ -33,31 +33,33 @@ export default function Recommended({ result }) {
   }, []);
 
   return (
-    <div className="recommended">
-      <h3>Recommended</h3>
-      <br></br>
-      <Grid container spacing={3}>
-        {rec.map((vid, index) => {
-          return (
-            <Grid item md={4} key={index}>
-              <div key={index} className="videocard">
-                <Link
-                  to={`/video/${vid.id}`}
-                  state={{ title: vid.snippet.title }}
-                >
-                  <img
-                    className="thumbnail"
-                    src={vid.snippet.thumbnails.medium.url}
-                    alt={vid.snippet.title}
-                  />
-                  <h5>{vid.snippet.title}</h5>
-                  {/* <p>{vid.snippet.description}</p> */}
-                </Link>
-              </div>
-            </Grid>
-          );
-        })}
-      </Grid>
+    <div className={darkmode ? "darkMode" : "default"}>
+      <div className="recommended">
+        <h2 style={{ color: darkmode ? "white" : "black" }}>Recommended</h2>
+        <br></br>
+        <Grid container spacing={3}>
+          {rec.map((vid, index) => {
+            return (
+              <Grid item md={4} key={index}>
+                <div key={index} className="videocard">
+                  <Link
+                    to={`/video/${vid.id}`}
+                    state={{ title: vid.snippet.title }}
+                  >
+                    <img
+                      className="thumbnail"
+                      src={vid.snippet.thumbnails.medium.url}
+                      alt={vid.snippet.title}
+                    />
+                    <h5>{vid.snippet.title}</h5>
+                    {/* <p>{vid.snippet.description}</p> */}
+                  </Link>
+                </div>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </div>
     </div>
   );
 }
