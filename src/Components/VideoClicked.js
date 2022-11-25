@@ -66,12 +66,9 @@ export default function VideoClicked({ input }) {
             <p>Views: {video.statistics.viewCount}</p>
             <p>Likes: {video.statistics.likeCount}</p>
             <span>Comment count: {video.statistics.commentCount}</span>
-            {/* {(vid.comments = [])} */}
 
-            {console.log(vid.comments)}
             <div className="comment_section">
               <Comments
-                // handleComments={handleComments}
                 vid={vid}
                 setComment={setComment}
                 comment={comment}

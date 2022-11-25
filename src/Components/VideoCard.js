@@ -7,15 +7,7 @@ export default function VideoCard({ result, videoId, setClicked }) {
   const { id } = useParams();
 
   //import new URL for fetching
-  let BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${id}&maxResult=15&key=AIzaSyAuLsFRZknOO7c4ZGDiGovyi3g3b8WCyiI`;
-
-  // useEffect(()=>{
-  // fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=AIzaSyAuLsFRZknOO7c4ZGDiGovyi3g3b8WCyiI`)
-  // .then((result)=> result.json())
-  //   .then((res)=> console.log(res.items))
-  //   .catch((err)=> console.log(err)
-  // )
-  // },[videoId])
+  let BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${id}&maxResult=15&key=${process.env.REACT_APP_API_KEY2}`;
 
   return (
     <div>

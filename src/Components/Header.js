@@ -21,9 +21,9 @@ export default function Header({
   return (
     <div className="header">
       <div className="header__leftside">
-        <div className="menuIcon">
+        {/* <div className="menuIcon">
           <MenuIcon />
-        </div>
+        </div> */}
         <ToggleSwitch darkmode={darkmode} setDarkmode={setDarkmode} />
         <Link to="/">
           <img
