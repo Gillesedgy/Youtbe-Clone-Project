@@ -3,7 +3,6 @@ import React from "react";
 import Recommended from "../Components/Recommended";
 
 import Grid from "@mui/material/Grid";
-import "./Home.css";
 
 export default function Home({ result, darkmode }) {
   return (

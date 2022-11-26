@@ -44,12 +44,15 @@ function App() {
                 />
               }
             />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About darkmode={darkmode} />} />
             <Route
               path="/videos/:userSearch"
               element={<VideoCard result={result} />}
             />
-            <Route path="/video/:id" element={<VideoClicked />} />
+            <Route
+              path="/video/:id"
+              element={<VideoClicked darkmode={darkmode} />}
+            />
             <Route path="/webdev" element={<Webdev darkmode={darkmode} />} />
             <Route
               path="/colorcode"

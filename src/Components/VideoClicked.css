@@ -1,0 +1,16 @@
+.youtube {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  /* transform: scale(1.1); */
+}
+
+.videoClicked {
+  line-height: 2;
+}
+
+.descrip {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+}

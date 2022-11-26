@@ -37,10 +37,10 @@ export default function Recommended({ result, darkmode }) {
       <div className="recommended">
         <h2 style={{ color: darkmode ? "white" : "black" }}>Recommended</h2>
         <br></br>
-        <Grid container spacing={3}>
+        <Grid container spacing={4}>
           {rec.map((vid, index) => {
             return (
-              <Grid item md={4} key={index}>
+              <Grid item md={3} key={index}>
                 <div key={index} className="videocard">
                   <Link
                     to={`/video/${vid.id}`}

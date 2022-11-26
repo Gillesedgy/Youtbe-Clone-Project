@@ -1,5 +1,6 @@
 .about__title {
   text-align: center;
+  line-height: 3;
 }
 .about__creators {
   display: flex;
@@ -8,7 +9,7 @@
 }
 .about__p a {
   text-decoration: none;
-  color: purple;
+  color: rgb(188, 37, 27);
 }
 .about__p a:hover {
   text-decoration: underline;
@@ -16,6 +17,7 @@
 
 .about__project {
   margin-right: 20px;
+  line-height: 2.2;
 }
 
 .about__edgy {
@@ -25,6 +27,8 @@
   width: 50%;
   color: white;
   margin: 8px;
+  border-radius: 9px;
+  border: 1px solid white;
 }
 
 .about__mina {
@@ -33,4 +37,11 @@
   padding: 10px;
   width: 50%;
   margin: 8px;
+  border-radius: 9px;
+  border: 1px solid white;
+}
+
+.hrs {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
