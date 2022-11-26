@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import Comments from "./Comments";
 // import Recommended from "./Recommended";
 import YouTube from "react-youtube";
+import "./VideoClicked.css";
 import { CommentBankRounded } from "@mui/icons-material";
 
-export default function VideoClicked({ input }) {
+export default function VideoClicked({ input, darkmode }) {
   const { id } = useParams();
   const [vid, setVid] = useState([]);
   const [click, setClick] = useState([]);
@@ -55,17 +56,27 @@ export default function VideoClicked({ input }) {
   // }).format(date);
   return (
     <div className="videoClicked">
-      <YouTube videoId={id} opts={opts} />
+      <div className="youtube">
+        <YouTube videoId={id} opts={opts} />
+      </div>
 
       {vid.map((video, index) => {
         return (
-          <div key={index}>
+          <div key={index} style={{ color: darkmode ? "white" : "black" }}>
             <h5>{video.snippet.channelTitle}</h5>
-            <h4>{video.snippet.title}</h4>
-            <br></br>
-            <p>Views: {video.statistics.viewCount}</p>
-            <p>Likes: {video.statistics.likeCount}</p>
-            <span>Comment count: {video.statistics.commentCount}</span>
+            <h3>{video.snippet.title}</h3>
+
+            <p>
+              <em>Views:</em> {video.statistics.viewCount}
+            </p>
+            <p>
+              <em>Likes:</em> {video.statistics.likeCount}
+            </p>
+            <p>
+              <em>Comment count:</em> {video.statistics.commentCount}
+            </p>
+            <em>Description: </em>
+            <p className="descrip">{video.snippet.description}</p>
 
             <div className="comment_section">
               <Comments
@@ -86,7 +97,6 @@ export default function VideoClicked({ input }) {
         );
       })}
 
-      <br></br>
       <hr></hr>
     </div>
   );

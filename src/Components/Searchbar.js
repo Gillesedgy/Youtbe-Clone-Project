@@ -58,11 +58,12 @@ export default function Searchbar({
         <div className="header__searchBar">
           <input
             type="text"
+            placeholder="Search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
           <button className="form__button" type="submit">
-            <SearchSharpIcon />
+            <SearchSharpIcon style={{ color: "red" }} />
           </button>
         </div>
       </form>

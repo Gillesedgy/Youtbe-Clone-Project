@@ -1,5 +1,6 @@
 .sidebar {
-  border: 1px rgb(67, 69, 70) solid;
+  /* border: 1px rgb(67, 69, 70) solid; */
+
   flex: 0.2;
   height: 800px;
   position: sticky;
@@ -7,6 +8,7 @@
   margin-right: 35px;
   padding: 5px;
   line-height: 3;
+  border-radius: 13px;
 }
 
 .sidebar__link a {
@@ -17,7 +19,7 @@
 }
 
 .sidebar__link:hover {
-  background-color: rgb(221, 212, 212);
+  background-color: rgb(211, 200, 200);
 }
 .sidebar__link span:hover {
   color: black;

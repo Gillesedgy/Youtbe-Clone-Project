@@ -6,14 +6,12 @@ import "./Comments.css";
 export default function Comments({ comment, setComment, vid }) {
   const [remark, setRemark] = useState({ commenter: "", comment: "" });
 
-  //! handleSubmit
   function handleSubmit(e) {
     e.preventDefault();
     // handleComment();
     addComments();
   }
-  //! handleComment function
-  //* do not put brackets arounf the value EDGYY!!!!!
+
   function handleComment(e) {
     setRemark({ ...remark, [e.target.id]: e.target.value });
   }
@@ -40,7 +38,7 @@ export default function Comments({ comment, setComment, vid }) {
             value={remark.commenter}
             onChange={handleComment}
           />
-          {/* {/* <br></br> */}
+
           <input
             type="text"
             id="comment"
@@ -62,7 +60,6 @@ export default function Comments({ comment, setComment, vid }) {
             </li>
           );
         })}
-        {console.log(comment)}
       </ul>
     </div>
   );

@@ -2,9 +2,6 @@
   display: flex;
   align-items: center;
   width: 30%;
-  /* border: 1px solid black;
-  border-radius: 12px;
-  background-color: white; */
 }
 
 .header__searchBar input {
@@ -17,19 +14,23 @@
 .form {
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid rgb(86, 80, 80);
   border-radius: 12px;
   background-color: white;
-  /* padding: 5px; */
+  transform: scale(1.1);
 }
 
 .form__button {
   border: none;
   border-radius: 50%;
   padding: 5px;
-  /* position: sticky;
-  top: 0;
-  z-index: 1; */
+  margin: 3px;
+  margin-right: 0px;
+}
 
-  /* background-color: bisque; */
+.form__button:hover {
+  cursor: pointer;
+  background-color: rgb(227, 216, 216);
+  transform: scale(1.2);
+  height: 110%;
 }
