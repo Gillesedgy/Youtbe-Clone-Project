@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   border: 1px solid rgb(86, 80, 80);
-  border-radius: 12px;
+  border-radius: 22px;
   background-color: white;
   transform: scale(1.1);
 }

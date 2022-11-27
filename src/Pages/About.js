@@ -48,6 +48,7 @@ export default function About({ darkmode }) {
             <br></br>
             📫 How to reach me: Edgygilles@pursuit.org
           </p>
+
           <Button href="https://github.com/Gillesedgy">Github</Button>
         </article>
         <article className="about__mina">
@@ -60,7 +61,6 @@ export default function About({ darkmode }) {
             💬 Ask me about Photoshop or Lightroom
             <br></br>⚡ Fun fact I am an animal person.
           </p>
-
           <Button href="https://github.com/minagrullon">Github</Button>
         </article>
       </div>

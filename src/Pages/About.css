@@ -2,6 +2,7 @@
   text-align: center;
   line-height: 3;
 }
+
 .about__creators {
   display: flex;
   justify-content: space-around;
@@ -21,27 +22,74 @@
 }
 
 .about__edgy {
-  background-color: rgb(50, 43, 43);
+  background-color: rgb(30, 28, 28);
   padding: 10px;
   text-align: center;
+  line-height: 4;
   width: 50%;
-  color: white;
+  color: rgb(242, 235, 235);
+  height: 400px;
+  font-weight: bold;
+  text-shadow: rgb(33, 33, 32) 2px 2px;
   margin: 8px;
   border-radius: 9px;
   border: 1px solid white;
+  background-image: url("https://media.gq.com/photos/5a53e7ad8a7b597c854baeb9/16:9/w_440,h_247,c_limit/the-office.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about__mina {
   background-color: #ecd1d1;
   text-align: center;
+  line-height: 4;
   padding: 10px;
   width: 50%;
   margin: 8px;
+  font-weight: bold;
+  color: white;
+  text-shadow: rgb(69, 69, 63) 1px 1px;
   border-radius: 9px;
   border: 1px solid white;
+  background-image: url("https://media1.giphy.com/media/pYNhxuY2Xx528/giphy.gif?cid=790b76119700c8b5adfa821ca1b4baa99b9b61a45e07cf70&rid=giphy.gif&ct=g");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hrs {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.video__container {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlaid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* 
+  background-color: rgba(0, 0, 0, 0.4); */
 }
