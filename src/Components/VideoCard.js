@@ -7,7 +7,7 @@ export default function VideoCard({ result }) {
   const { id } = useParams();
 
   //import new URL for fetching
-  let BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${id}&maxResult=15&key=${process.env.REACT_APP_API_KEY2}`;
+  // let BASE_URL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${id}&maxResult=15&key=${process.env.REACT_APP_API_KEY2}`;
 
   return (
     <div>

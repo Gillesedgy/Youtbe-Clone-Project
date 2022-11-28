@@ -52,7 +52,6 @@ export default function Recommended({ result, darkmode }) {
                       alt={vid.snippet.title}
                     />
                     <h5>{vid.snippet.title}</h5>
-                    {/* <p>{vid.snippet.description}</p> */}
                   </Link>
                 </div>
               </Grid>

@@ -1,8 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import SearchSharpIcon from "@mui/icons-material/SearchSharp";
+
 import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone";
 import "./Header.css";
 import InfoSharpIcon from "@mui/icons-material/InfoSharp";

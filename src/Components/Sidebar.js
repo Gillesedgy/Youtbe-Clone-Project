@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HomeSharpIcon from "@mui/icons-material/HomeSharp";
 import "./Sidebar.css";
-// import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 export default function Sidebar({ darkmode }) {
   return (

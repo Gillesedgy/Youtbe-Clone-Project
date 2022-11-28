@@ -8,23 +8,18 @@ function ToggleSwitch({ darkmode, setDarkmode }) {
     if (darkmode === true) {
       setDarkmode(false);
       setColor("white");
-      // handleBackground(color);
     } else {
       setColor("#282828");
       setDarkmode(true);
-      // handleBackground(color);
     }
   };
 
   useEffect(() => {
-    // const handleBackground = (color) => {
     document.body.style.backgroundColor = color;
   }, [color]);
-  // };
+
   return (
     <div className="switch__container">
-      {/* button  basic for now just for functionality */}
-
       <div className="toggle__switch">
         <label>
           <input

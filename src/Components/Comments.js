@@ -3,12 +3,12 @@ import { useState } from "react";
 import Paper from "@mui/material/Paper";
 import "./Comments.css";
 
-export default function Comments({ comment, setComment, vid }) {
+export default function Comments({ comment, setComment }) {
   const [remark, setRemark] = useState({ commenter: "", comment: "" });
 
   function handleSubmit(e) {
     e.preventDefault();
-    // handleComment();
+
     addComments();
   }
 

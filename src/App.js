@@ -7,8 +7,6 @@ import Webdev from "./Pages/Webdev";
 import Colorcode from "./Pages/Colorcode";
 import WWDITS from "./Pages/WWDITS";
 import "./App.css";
-// import ToggleSwitch from "././BonusFeatures/ToggleSwitch";
-// import { DarkMode } from "@mui/icons-material";
 
 function App() {
   const [result, setResult] = useState([]);
@@ -34,16 +32,7 @@ function App() {
         </div>
         <div className="app__routes">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  result={result}
-                  setResult={setResult}
-                  darkmode={darkmode}
-                />
-              }
-            />
+            <Route path="/" element={<Home darkmode={darkmode} />} />
             <Route path="/about" element={<About darkmode={darkmode} />} />
             <Route
               path="/videos/:userSearch"

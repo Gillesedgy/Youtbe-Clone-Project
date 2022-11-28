@@ -28,8 +28,6 @@ export default function WWDITS({ darkmode }) {
                     alt={vid.snippet.title}
                   />
                   <h5>{vid.snippet.title}</h5>
-
-                  {/* <p>{vid.snippet.description}</p> */}
                 </Link>
                 <br></br>
               </div>

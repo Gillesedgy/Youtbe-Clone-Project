@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import "./Searchbar.css";
 
@@ -8,7 +8,7 @@ export default function Searchbar({
   result,
   setResult,
   setShowModal,
-  input,
+
   setInput,
 }) {
   const [search, setSearch] = useState("");

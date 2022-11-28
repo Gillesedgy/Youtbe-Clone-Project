@@ -4,12 +4,11 @@ import Comments from "./Comments";
 // import Recommended from "./Recommended";
 import YouTube from "react-youtube";
 import "./VideoClicked.css";
-import { CommentBankRounded } from "@mui/icons-material";
 
 export default function VideoClicked({ input, darkmode }) {
   const { id } = useParams();
   const [vid, setVid] = useState([]);
-  const [click, setClick] = useState([]);
+
   const [comment, setComment] = useState([]);
   const opts = {
     videoId: id,
@@ -25,12 +24,11 @@ export default function VideoClicked({ input, darkmode }) {
   };
 
   //! function for newComments
-  function handleComments(newComment) {
-    setComment([...comment, newComment]);
-  }
+  // function handleComments(newComment) {
+  //   setComment([...comment, newComment]);
+  // }
 
   let saved = JSON.parse(window.localStorage.getItem("title"));
-  let date;
 
   useEffect(() => {
     if (saved) {
@@ -42,7 +40,7 @@ export default function VideoClicked({ input, darkmode }) {
     )
       .then((result) => result.json())
       .then((res) => {
-        console.log("had to waste a fecth, damn");
+        console.log("had to waste a fetch, damn");
         setVid(res.items);
         let title = res.items[0].snippet.title;
 
@@ -51,9 +49,6 @@ export default function VideoClicked({ input, darkmode }) {
       .catch((err) => console.log(err));
   }, []);
 
-  // new Intl.DateTimeFormat("en-US", {
-  //   dateStyle: "long",
-  // }).format(date);
   return (
     <div className="videoClicked">
       <div className="youtube">
