@@ -8,7 +8,6 @@ export default function Searchbar({
   result,
   setResult,
   setShowModal,
-
   setInput,
 }) {
   const [search, setSearch] = useState("");

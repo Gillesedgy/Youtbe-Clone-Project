@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Comments from "./Comments";
-// import Recommended from "./Recommended";
 import YouTube from "react-youtube";
 import "./VideoClicked.css";
+import { DisabledByDefault } from "@mui/icons-material";
 
 export default function VideoClicked({ input, darkmode }) {
   const { id } = useParams();
   const [vid, setVid] = useState([]);
+  let [like, setLike] = useState(false);
+  const [dislike, setDislike] = useState(false);
+  const [count, setCount] = useState(0);
 
   const [comment, setComment] = useState([]);
   const opts = {
@@ -19,7 +22,7 @@ export default function VideoClicked({ input, darkmode }) {
     playsInline: true,
     preload: "auto",
     width: "640",
-    height: "390",
+    height: "420",
     aspectRatio: "16:9",
   };
 
@@ -28,25 +31,45 @@ export default function VideoClicked({ input, darkmode }) {
   //   setComment([...comment, newComment]);
   // }
 
-  let saved = JSON.parse(window.localStorage.getItem("title"));
+  function likesUp() {
+    setCount((prevCount) => prevCount + 1);
+    setLike(true);
+    setDislike(false);
+  }
+
+  function likesDown() {
+    setCount(count - 1);
+    setDislike(true);
+    setLike(false);
+  }
+
+  let saved = JSON.parse(window.localStorage.getItem(id));
 
   useEffect(() => {
     if (saved) {
-      console.log("it is already saved!");
-      setVid(saved.items);
-    }
-    fetch(
-      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${process.env.REACT_APP_API_KEY2}`
-    )
-      .then((result) => result.json())
-      .then((res) => {
-        console.log("had to waste a fetch, damn");
-        setVid(res.items);
-        let title = res.items[0].snippet.title;
+      setComment(saved);
+      fetch(
+        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${process.env.REACT_APP_API_KEY2}`
+      )
+        .then((result) => result.json())
+        .then((res) => {
+          setVid(res.items);
 
-        window.localStorage.setItem(title, JSON.stringify(res));
-      })
-      .catch((err) => console.log(err));
+          setCount(Number(res.items[0].statistics.likeCount));
+        });
+    } else {
+      fetch(
+        `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${process.env.REACT_APP_API_KEY2}`
+      )
+        .then((result) => result.json())
+        .then((res) => {
+          setVid(res.items);
+
+          setCount(Number(res.items[0].statistics.likeCount));
+          window.localStorage.setItem(id, JSON.stringify([]));
+        })
+        .catch((err) => console.log(err));
+    }
   }, []);
 
   return (
@@ -61,15 +84,22 @@ export default function VideoClicked({ input, darkmode }) {
             <h5>{video.snippet.channelTitle}</h5>
             <h3>{video.snippet.title}</h3>
 
-            <p>
-              <em>Views:</em> {video.statistics.viewCount}
-            </p>
-            <p>
-              <em>Likes:</em> {video.statistics.likeCount}
-            </p>
-            <p>
-              <em>Comment count:</em> {video.statistics.commentCount}
-            </p>
+            <div className="video_dets">
+              <p>
+                <em className="p_em">Views:</em>{" "}
+                <b>{video.statistics.viewCount}</b>
+              </p>
+              <p>
+                <em className="p_em">Likes:</em> <b>{count}</b>{" "}
+                <button onClick={!like ? likesUp : null}>👍🏽</button>{" "}
+                <button onClick={!dislike ? likesDown : null}>👎🏽</button>
+              </p>
+              <p>
+                <em className="p_em">Comment count:</em>{" "}
+                <b>{video.statistics.commentCount}</b>
+              </p>
+            </div>
+            <div></div>
             <em>Description: </em>
             <p className="descrip">{video.snippet.description}</p>
 
@@ -79,15 +109,9 @@ export default function VideoClicked({ input, darkmode }) {
                 setComment={setComment}
                 comment={comment}
                 input={input}
+                saved={saved}
               />
             </div>
-            {/* {(date = new Date(video.snippet.publishedAt))}
-            <p>
-              Date Published:{" "}
-              {new Intl.DateTimeFormat("en-US", {
-                dateStyle: "long",
-              }).format(date)}
-            </p> */}
           </div>
         );
       })}
