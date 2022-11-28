@@ -13,3 +13,13 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.video_dets {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.p_em {
+  color: red;
+}

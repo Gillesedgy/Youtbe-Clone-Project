@@ -1,15 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import Paper from "@mui/material/Paper";
 import "./Comments.css";
 
 export default function Comments({ comment, setComment }) {
+  const { id } = useParams();
   const [remark, setRemark] = useState({ commenter: "", comment: "" });
 
   function handleSubmit(e) {
     e.preventDefault();
-
     addComments();
+    setRemark({ commenter: "", comment: "" });
   }
 
   function handleComment(e) {
@@ -18,6 +20,8 @@ export default function Comments({ comment, setComment }) {
   function addComments() {
     const commentList = [...comment];
     commentList.push(remark);
+    let array = JSON.parse(window.localStorage.getItem(id));
+    array.push(commentList);
     setComment(commentList);
   }
   return (
