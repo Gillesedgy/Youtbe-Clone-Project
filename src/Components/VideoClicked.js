@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import Comments from "./Comments";
 import YouTube from "react-youtube";
 import "./VideoClicked.css";
-import { DisabledByDefault } from "@mui/icons-material";
+import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp";
+import HeartBrokenSharpIcon from "@mui/icons-material/HeartBrokenSharp";
+import HeartBrokenOutlinedIcon from "@mui/icons-material/HeartBrokenOutlined";
 
 export default function VideoClicked({ input, darkmode }) {
   const { id } = useParams();
@@ -25,11 +27,6 @@ export default function VideoClicked({ input, darkmode }) {
     height: "420",
     aspectRatio: "16:9",
   };
-
-  //! function for newComments
-  // function handleComments(newComment) {
-  //   setComment([...comment, newComment]);
-  // }
 
   function likesUp() {
     setCount((prevCount) => prevCount + 1);
@@ -64,7 +61,6 @@ export default function VideoClicked({ input, darkmode }) {
         .then((result) => result.json())
         .then((res) => {
           setVid(res.items);
-
           setCount(Number(res.items[0].statistics.likeCount));
           window.localStorage.setItem(id, JSON.stringify([]));
         })
@@ -91,8 +87,19 @@ export default function VideoClicked({ input, darkmode }) {
               </p>
               <p>
                 <em className="p_em">Likes:</em> <b>{count}</b>{" "}
-                <button onClick={!like ? likesUp : null}>👍🏽</button>{" "}
-                <button onClick={!dislike ? likesDown : null}>👎🏽</button>
+                <button className="likebutton" onClick={!like ? likesUp : null}>
+                  <FavoriteSharpIcon />
+                </button>{" "}
+                <button
+                  className="dislikebutton"
+                  onClick={!dislike ? likesDown : null}
+                >
+                  {darkmode ? (
+                    <HeartBrokenOutlinedIcon style={{ color: "white" }} />
+                  ) : (
+                    <HeartBrokenSharpIcon />
+                  )}
+                </button>
               </p>
               <p>
                 <em className="p_em">Comment count:</em>{" "}
