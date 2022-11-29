@@ -1,29 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Paper from "@mui/material/Paper";
 import "./Comments.css";
 
-export default function Comments({ comment, setComment }) {
+export default function Comments({ comment, setComment, saved }) {
   const { id } = useParams();
   const [remark, setRemark] = useState({ commenter: "", comment: "" });
 
   function handleSubmit(e) {
     e.preventDefault();
     addComments();
+    handleComment(e);
     setRemark({ commenter: "", comment: "" });
   }
 
+  console.log(saved);
   function handleComment(e) {
     setRemark({ ...remark, [e.target.id]: e.target.value });
   }
   function addComments() {
     const commentList = [...comment];
     commentList.push(remark);
-    let array = JSON.parse(window.localStorage.getItem(id));
-    array.push(commentList);
+
     setComment(commentList);
+    console.log(comment);
+    window.localStorage.setItem(id, JSON.stringify(comment));
   }
+
+  useEffect(() => {
+    window.localStorage.setItem(id, JSON.stringify(comment));
+  }, [comment]);
+
   return (
     <div>
       <h4>Comments</h4>
@@ -40,7 +48,9 @@ export default function Comments({ comment, setComment }) {
             id="commenter"
             placeholder="Name"
             value={remark.commenter}
-            onChange={handleComment}
+            onChange={(e) => {
+              handleComment(e);
+            }}
           />
 
           <input
@@ -48,7 +58,9 @@ export default function Comments({ comment, setComment }) {
             id="comment"
             placeholder="Add a comment!"
             value={remark.comment}
-            onChange={handleComment}
+            onChange={(e) => {
+              handleComment(e);
+            }}
           />
           <input className="comment__button" type="submit" value="Submit!" />
         </div>

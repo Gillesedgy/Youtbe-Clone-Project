@@ -24,11 +24,10 @@
 
 .comment__box {
   display: flex;
-  padding: 9px;
+  padding: 10px;
   flex-wrap: wrap;
   border-radius: 17px;
-  background-color: rgb(255, 111, 111);
-  opacity: 60%;
+  background-color: rgb(240, 204, 204);
 }
 
 .comment__button {
